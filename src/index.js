@@ -5,7 +5,8 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-require('dotenv').config();
+import 'dotenv/config';
+
 const container = document.getElementById('root');
 const root = createRoot(container);
 

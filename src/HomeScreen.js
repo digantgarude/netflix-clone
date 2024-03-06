@@ -2,6 +2,7 @@ import React from 'react'
 import './HomeScreen.css'
 import Nav from './Nav'
 import Banner from './Banner'
+import requests from './Request'
 
 function HomeScreen() {
   return (
@@ -9,7 +10,8 @@ function HomeScreen() {
         <Nav/>
 
         <Banner/>
-          
+        
+
     </div>
   )
 }
