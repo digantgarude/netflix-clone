@@ -1,3 +1,5 @@
+[![Deploy to Firebase Hosting on PR](https://github.com/digantgarude/netflix-clone/actions/workflows/firebase-hosting-pull-request.yml/badge.svg?branch=main)](https://github.com/digantgarude/netflix-clone/actions/workflows/firebase-hosting-pull-request.yml)
+
 # Getting Started with Create React App and Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
@@ -48,3 +50,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 Marker => 45.34 min 
 Marker => 1:30:59 min 
+Marker => 1:36:59 min 
