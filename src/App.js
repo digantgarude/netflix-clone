@@ -9,18 +9,29 @@ import {
 import LoginScreen from './screens/LoginScreen';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, login, selectUser } from './features/userSlice';
 
 function App() {
-  const user = null;
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect(() => {
+  
+    // Unsubscribe is used if the component is unmounted then to help with clean up.
     const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
       if (userAuth) {
         // User is signed in
         console.log(userAuth);
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email
+        }));
+
       }else{
         // user is signed out
         console.log("User is signed out");
+        dispatch(logout());
       }
     });
 
