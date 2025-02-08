@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen';
 import {
   BrowserRouter as Router,
   Routes,
@@ -44,6 +45,7 @@ function App() {
         {
           !user ? (<LoginScreen/>) : (
             <Routes>
+              <Route path='/profile' element={<ProfileScreen/>} />
               <Route path='/' element={<HomeScreen/>} />
             </Routes>
             )

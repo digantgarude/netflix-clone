@@ -53,3 +53,12 @@ Marker => 1:30:59 min
 Marker => 1:36:59 min
 Marker => 1:50:01 min 
 Marker => 2:18:00 min 
+Marker => 2:46:50 min 
+Marker => 3:26:31 min 
+
+Firestore Features:
+- Allow auth / permissions at the db level to block / allow read access to database content. 
+
+Stripe:
+- Customer portal : handle payments, end of payments after month/ subscription period, issue invoices automatically once payment is done.  
+- Discounts/coupons,etc.
