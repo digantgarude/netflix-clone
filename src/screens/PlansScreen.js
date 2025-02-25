@@ -26,7 +26,7 @@ function PlansScreen() {
     const loadCheckOut = async (productId) => {
         console.log(productId);
         let docRef = collection(db, `customers`,user.uid);
-        getDoc
+        
         updateDoc(docRef, {
             productId: productId
         });
