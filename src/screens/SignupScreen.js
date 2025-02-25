@@ -1,7 +1,8 @@
 import React, {useRef} from 'react'
 import './SignupScreen.css';
-import {auth} from './../firebase';
+import db, {auth} from './../firebase';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { addDoc, collection } from 'firebase/firestore';
 
 function SignupScreen() {
     const emailRef = useRef(null);
@@ -14,6 +15,15 @@ function SignupScreen() {
             passwordRef.current.value)
         .then((userCrential) => {
             console.log(userCrential)
+            const customersRef = collection(db, 'customers');
+            addDoc(customersRef, {
+                user: userCrential.user.uid,
+                productId: "NONE"
+            }).then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
+            }).catch((error) => {
+                console.error("Error adding document: ", error);
+            });
         }).catch((error) => {
             alert(error.message);
         })

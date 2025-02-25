@@ -1,6 +1,5 @@
 import React from 'react'
 import "./ProfileScreen.css"
-import "./PlansScreen.css"
 import Nav from '../Nav'
 import PlansScreen from './PlansScreen'
 import { useSelector } from 'react-redux'
